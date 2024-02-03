@@ -58,7 +58,7 @@ final_data_tall
 # write.csv(final_data_tall,'analysis_tall.csv',row.names=FALSE)
 
 # using the wider tidy data and summarize_all to calculate statistics
-# an observation consists of Subject, Activity and the 81 measurements that contain mean or sd
+# an observation consists of Subject, Activity and the 79 measurements that contain mean or sd
 #final_data_wide <- data_wide %>% group_by(Subject,Activity) %>% summarize_all( list(mean=mean))
 
 
