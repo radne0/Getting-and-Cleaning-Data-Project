@@ -44,12 +44,21 @@ colnames(combined_data) <- c('Subject','Activity',feature_labels[,2] )
 #To account for the Subject and Activity columns, we offset the
 #desired_features vector by 2, to ensure the desired columns are obtained.
 data_wide <- combined_data[ ,c(1,2,desired_features+2)  ]
+
+
+#creating a tall tidy set.  an observation consists of a Subject, Activity, a specific measurement type, and the measurement reading
 data_tall <- pivot_longer(data_wide,c(-Subject,-Activity),names_to = "Measurement.Name", values_to = "reading")
 
 #then the desired averages are computed by
 final_data_tall <- data_tall %>% group_by(Subject,Activity,Measurement.Name) %>% summarize(measurement.means = mean(reading))
 final_data_tall
 
+# output data.
+# write.csv(data_tall,'tidy_tall.csv',row.names=FALSE)
+# write.csv(final_data_tall,'analysis_tall.csv',row.names=FALSE)
+
+# using the wider tidy data and summarize_all to calculate statistics
+# an observation consists of Subject, Activity and the 81 measurements that contain mean or sd
 #final_data_wide <- data_wide %>% group_by(Subject,Activity) %>% summarize_all( list(mean=mean))
 
 

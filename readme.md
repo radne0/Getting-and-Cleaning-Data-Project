@@ -13,8 +13,15 @@ output: html_document
 | run_analysis.R       | The file responsible for merging and tidying up the dataset and running the desired analysis  |      
 | tidy_tall.csv        | tall tidy data before analysis.                                                               |     
 | analysis_tall.csv    | final analyzed dataset summary.                                                               |
+| cookbook.md          | Description of data in the final dataset.                                                     |
 
 
+The provided csv were written from our tidyed up data in the following manner: 
+```
+write.csv(data_tall,'tidy_tall.csv',row.names=FALSE)
+write.csv(final_data_tall,'analysis_tall.csv',row.names=FALSE)
+```
+and can be read using read.csv('filename.csv') with no other parameters.
 
 
 ## Project Description
