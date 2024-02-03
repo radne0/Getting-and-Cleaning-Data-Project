@@ -5,13 +5,16 @@ output: html_document
 ---
 
 
-## Files included in this repository
-File                             Description
------------------------------ --------------------------------------------------------
-readme.md                      This file.
-run_analysis.R                 The file responsible for merging and tidying up the dataset and running the desired analysis
-tidy_tall.csv                  tall tidy data before analysis.
-analysis_tall.csv              final analyzed dataset summary. (wide data)
+## Files included in this repository.
+
+| File                 | Description                                                                                   |
+|----------------------|-----------------------------------------------------------------------------------------------|
+| readme.md            | This file.                                                                                    |   
+| run_analysis.R       | The file responsible for merging and tidying up the dataset and running the desired analysis  |      
+| tidy_tall.csv        | tall tidy data before analysis.                                                               |     
+| analysis_tall.csv    | final analyzed dataset summary. (wide data)                                                   |
+
+
 
 
 ## Project Description
