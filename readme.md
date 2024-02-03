@@ -50,7 +50,12 @@ Also accompanying this data were the following informative text files that were 
 underlying structure of the data.
 
 
-
+| File                    | Description                                                                        | 
+|-------------------------|------------------------------------------------------------------------------------|
+| readme.txt              | this filed details what many of the included files are.                            |
+| features.txt            | list of the 561 measurements measured in the experiment                            |
+| features_info.txt       | some detailed information about what and how the measurements were collected       |
+| activities_labels.txt   | file explaining how each activity is enumerated (assigned a value 1-6)             |
 
 | File                          |  Description
 |-------------------------------|-----------------------------------------------------------------------------------|
