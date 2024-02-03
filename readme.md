@@ -12,7 +12,7 @@ output: html_document
 | readme.md            | This file.                                                                                    |   
 | run_analysis.R       | The file responsible for merging and tidying up the dataset and running the desired analysis  |      
 | tidy_tall.csv        | tall tidy data before analysis.                                                               |     
-| analysis_tall.csv    | final analyzed dataset summary. (wide data)                                                   |
+| analysis_tall.csv    | final analyzed dataset summary.                                                               |
 
 
 
@@ -50,12 +50,15 @@ Also accompanying this data were the following informative text files that were 
 underlying structure of the data.
 
 
-File                             Descriptions
------------------------------ --------------------------------------------------------
-readme.txt                     this filed details what many of the included files are.
-features.txt                   list of the 561 measurements measured in the experiment
-features_info.txt              some detailed information about what and how the measurements were collected
-activities_labels.txt          file explaining how each activity is enumerated (assigned a value 1-6)
+
+
+| File                          |  Description
+|-------------------------------|-----------------------------------------------------------------------------------|
+| readme.txt                    |  this filed details what many of the included files are.                          |
+| features.txt                  |  list of the 561 measurements measured in the experiment                          |
+| features_info.txt             |  some detailed information about what and how the measurements were collected     |
+| activities_labels.txt         |  file explaining how each activity is enumerated (assigned a value 1-6)           |
+
 
 It should be noted that this dataset is split into testing and training data as it was used for to classify
 activities based on accelerometer and gyroscopic data.  In practice the training data would have labels that would be used
@@ -141,14 +144,14 @@ desired_features vector for this, remembering to offset it by 2 since there are 
 data_wide <- combined_data[ ,c(1,2,desired_features+2)  ]
 ```
 
-Lastly, we gather the measurement columns to form a tall tidydataset.
+Lastly, we gather the measurement columns to form a tall tidy dataset.  In this format an observation consists of a Subject, the activity being performed, the measurement being taken and the value of that measurement.  This is the typical "tall" dataset that is exemplified in Wickman's paper on Tidying data.
 ```
-data_tall <- pivot_longer(data_wide,c(-Subject,-Activity),names_to = "Measurement.Name", values_to = "mean.of.measurement")
+data_tall <- pivot_longer(data_wide,c(-Subject,-Activity),names_to = "Measurement.Name", values_to = "reading")
 ```                          
                           
-This allows for the desired averages to be calculated.                          
+This allows for the desired averages to be calculated with ease.                          
 ```
-final_data_tall <- data_tall %>% group_by(Subject,Activity,Measurement.Name) %>% summarize(measurement_means = mean(mean.of.measurement))
+final_data_tall <- data_tall %>% group_by(Subject,Activity,Measurement.Name) %>% summarize(measurement_means = mean(reading))
 ```
 
 
