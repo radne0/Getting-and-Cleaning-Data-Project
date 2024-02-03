@@ -151,7 +151,7 @@ data_tall <- pivot_longer(data_wide,c(-Subject,-Activity),names_to = "Measuremen
                           
 This allows for the desired averages to be calculated with ease.                          
 ```
-final_data_tall <- data_tall %>% group_by(Subject,Activity,Measurement.Name) %>% summarize(measurement_means = mean(reading))
+final_data_tall <- data_tall %>% group_by(Subject,Activity,Measurement.Name) %>% summarize(measurement.means = mean(reading))
 ```
 
 

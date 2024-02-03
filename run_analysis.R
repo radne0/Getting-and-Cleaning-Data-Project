@@ -44,11 +44,10 @@ colnames(combined_data) <- c('Subject','Activity',feature_labels[,2] )
 #To account for the Subject and Activity columns, we offset the
 #desired_features vector by 2, to ensure the desired columns are obtained.
 data_wide <- combined_data[ ,c(1,2,desired_features+2)  ]
-data_tall <- pivot_longer(data_wide,c(-Subject,-Activity),names_to = "Measurement.Name", values_to = "mean.of.measurement",
-                          cols_vary= 'fastest')
+data_tall <- pivot_longer(data_wide,c(-Subject,-Activity),names_to = "Measurement.Name", values_to = "reading")
 
 #then the desired averages are computed by
-final_data_tall <- data_tall %>% group_by(Subject,Activity,Measurement.Name) %>% summarize(measurement_means = mean(mean.of.measurement))
+final_data_tall <- data_tall %>% group_by(Subject,Activity,Measurement.Name) %>% summarize(measurement.means = mean(reading))
 final_data_tall
 
 #final_data_wide <- data_wide %>% group_by(Subject,Activity) %>% summarize_all( list(mean=mean))
