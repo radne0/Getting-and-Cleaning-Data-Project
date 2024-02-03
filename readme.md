@@ -36,14 +36,14 @@ This dataset(s) contains data from the following experiment
   
 Upon reading the provided readme.txt file that accompanied this data, we see that the data spans across 6 files ()
 
-File                             Description
------------------------------ --------------------------------------------------------
-test\\subject_test.txt         Contains labels for each participant in the test data  
-test\\y_test.txt               Contains labels for each activity performed in the test data.
-test\\x_test.txt               Contains the Accelerometer and Gyroscope measurements for the test data
-training\\subject_test.txt    Contains labels for each participant in the test data  
-training\\y_test.txt             Contains labels for each activity performed in the test data.
-training\\x_test.txt            Contains the Accelerometer and Gyroscope measurements for the test data
+| File                        | Description                                                                        | 
+|-----------------------------|------------------------------------------------------------------------------------|
+| test\\subject_test.txt      |   Contains labels for each participant in the test data                            |
+| test\\y_test.txt            |   Contains labels for each activity performed in the test data.                    |
+| test\\x_test.txt            |   Contains the Accelerometer and Gyroscope measurements for the test data          |
+| training\\subject_test.txt  |  Contains labels for each participant in the test data                             |
+| training\\y_test.txt        |     Contains labels for each activity performed in the test data.                  |
+| training\\x_test.txt        |    Contains the Accelerometer and Gyroscope measurements for the test data         |
 
 
 Also accompanying this data were the following informative text files that were instrumental in understanding the 
