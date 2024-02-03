@@ -75,6 +75,8 @@ First, looking at the data and provided readme, we will construct the data from 
 ![](combined_data.png)
 
 
+### run_analysis.R details
+
 To aid in the analysis of the overall data, we will make use of the dplyr and tidyr libraries.  
 
 
