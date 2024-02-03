@@ -11,7 +11,7 @@ activity_labels <- read.table('UCI HAR Dataset\\activity_labels.txt')
 feature_labels <- read.table('UCI HAR Dataset\\features.txt')
 
 #Find the desired columns.  Note this excludes the angle features which use a mean as a parameter.
-desired_features <- c(grep('-mean',feature_labels$V2),grep('-std',feature_labels$V2))
+desired_features <- c(grep('mean',feature_labels$V2),grep('std',feature_labels$V2))
 desired_features <- sort(desired_features)
 
 
