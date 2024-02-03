@@ -57,13 +57,6 @@ underlying structure of the data.
 | features_info.txt       | some detailed information about what and how the measurements were collected       |
 | activities_labels.txt   | file explaining how each activity is enumerated (assigned a value 1-6)             |
 
-| File                          |  Description
-|-------------------------------|-----------------------------------------------------------------------------------|
-| readme.txt                    |  this filed details what many of the included files are.                          |
-| features.txt                  |  list of the 561 measurements measured in the experiment                          |
-| features_info.txt             |  some detailed information about what and how the measurements were collected     |
-| activities_labels.txt         |  file explaining how each activity is enumerated (assigned a value 1-6)           |
-
 
 It should be noted that this dataset is split into testing and training data as it was used for to classify
 activities based on accelerometer and gyroscopic data.  In practice the training data would have labels that would be used
